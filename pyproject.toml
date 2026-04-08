@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "juniorfetch"
+version = "0.1.0"
+description = "JuniorFetch — Free local disk semantic search using Bit Drift + TDA Meshes + Omni Math. Full-disk indexing, no cloud, no payments."
+authors = [{ name = "JuniorCloud LLC" }]
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.9.0",
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.23.0",
+    "pydantic>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "pyarrow>=14.0.0",
+    "pandas>=2.0.0"
+]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.31.0"]
+dev = ["streamlit>=1.31.0"]
+
+[project.scripts]
+juniorfetch = "juniorfetch.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["juniorfetch"]
