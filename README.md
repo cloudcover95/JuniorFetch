@@ -1,5 +1,4 @@
-# JuniorFetch a JuniorCloudllc development
-Tired of api? host local
+# JuniorFetch
 
 **Free, fully local semantic file search for your entire computer.**
 
@@ -46,3 +45,37 @@ juniorfetch index ~/Documents
 
 # 5. Launch the beautiful dashboard
 juniorfetch dashboard
+Then open http://localhost:8501 in your browser.
+Commands
+Bashjuniorfetch index ~/Documents          # Index a folder
+juniorfetch index /                    # Index entire disk (use with caution)
+juniorfetch search "machine learning training code"   # Semantic search
+juniorfetch dashboard                  # Start web UI
+Tech Stack
+
+Core Math: Sovereign Omni Math Kernel + Bit Drift inference
+Memory System: Custom TDA Meshes (Topological Data Analysis)
+Storage: Raw verbatim JSONL + Parquet (lossless)
+UI: Streamlit dashboard
+CLI: Typer
+Server: FastAPI (MCP compatible)
+
+Project Goals
+
+Replace any paid/cloud file search tool
+Maximum privacy and control
+Excellent performance on consumer hardware (especially Apple Silicon)
+Easy to extend (PDFs, images with OCR, incremental watching, etc.)
+
+Roadmap
+
+ PDF support (PyMuPDF)
+ Incremental / watched folder indexing
+ Better file preview in dashboard
+ Knowledge Graph visualization
+ Long-term scaling benchmarks
+
+License
+MIT License — Free to use, modify, and distribute.
+
+Made with ❤️ by JuniorCloud LLC
